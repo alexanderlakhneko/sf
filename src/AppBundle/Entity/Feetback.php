@@ -52,7 +52,7 @@ class Feetback
     /**
      * @var string
      *
-     * @ORM\Column(name="ip_adress", type="string", length=50)
+     * @ORM\Column(name="ip_adress", type="string", length=50 )
      */
     private $ipAdress;
 
