@@ -1,0 +1,10 @@
+{% extends 'AppBundle::default_layout.html.twig' %}
+
+{% block body %}
+
+    <h1>Authors</h1>
+    {% for author in authors %}
+        {{ author.lastName }} {{ author.firstName }} <br>
+    {% endfor %}
+
+{% endblock %}

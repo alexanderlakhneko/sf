@@ -2,6 +2,7 @@
 
 namespace AppBundle\Controller;
 
+use AppBundle\Entity\Feetback;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
@@ -16,8 +17,20 @@ class DefaultController extends Controller
      */
     public function indexAction(Request $request)
     {
-        $a = 'Alex';
-        return ['name' => $a];
+//        $em = $this->get('doctrine')->getManager();
+//
+//        $feetback = (new Feetback())
+//            ->setEmail('al@al.al')
+//            ->setIpAddress('127.0.0.1')
+//            ->setMassage('hello')
+//            ->setName('Al');
+//
+//        $em->persist($feetback);
+//        $em->flush();
+//
+//        dump($feetback);
+
+        return [];
     }
 
     /**

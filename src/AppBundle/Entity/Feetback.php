@@ -3,6 +3,7 @@
 namespace AppBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints\DateTime;
 
 /**
  * Feetback
@@ -52,24 +53,33 @@ class Feetback
     /**
      * @var string
      *
-     * @ORM\Column(name="ip_adress", type="string", length=50 )
+     * @ORM\Column(name="ip_address", type="string", length=50 )
      */
-    private $ipAdress;
+    private $ipAddress;
+
+    public function __construct()
+    {
+        $this->created = new \DateTime();
+    }
 
     /**
      * @return string
      */
-    public function getIpAdress()
+    public function getIpAddress()
     {
-        return $this->ipAdress;
+        return $this->ipAddress;
     }
 
     /**
-     * @param string $ipAdress
+     * @param string $ipAddress
+     *
+     * @return Feetback
      */
-    public function setIpAdress($ipAdress)
+    public function setIpAddress($ipAddress)
     {
-        $this->ipAdress = $ipAdress;
+        $this->ipAddress = $ipAddress;
+
+        return $this;
     }
 
 
